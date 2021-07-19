@@ -12,5 +12,41 @@
 {% endblock  %}
 
 {% block 'content' %}
-    <h1> Welcome </h1>
+    <header id="main-navigation">
+        <h1><a href="">Subhash's Blog </a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+    
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/profile.jpeg' %}" alt="Subhash- The Author Of this Blog" />
+            <h2> SUBHASH'S BLOG </h2>
+        </header>
+        <p> Hi, i am subhash and i post blog on tech related stuff</p>
+    </section>
+
+    <section>
+        <h2> My Latest Thoughts </h2>
+
+        <ul>
+            <li>
+                <article>
+                    <a href="">
+                    <img src="" alt="mountain-hiking" />
+                    <div>
+                        <h3> Mountain hiking</h3>
+                        <p> {% lorem 1 b random %} </p>
+                    </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+    <h2> what i do</h2>
+    <p> {% lorem 1 b random %} </p>
+    </section>
 {% endblock  %}
