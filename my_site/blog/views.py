@@ -19,7 +19,7 @@ all_posts = [
     },
     {
         "slug":"tech",
-        "image":"mountains.jpeg",
+        "image":"mountains.jpg",
         "author":"subhash",
         "date": date(2006,5,15),
         "title":"mountain hiking",
@@ -30,7 +30,7 @@ all_posts = [
     },
     {
         "slug":"laptop",
-        "image":"mountains.jpeg",
+        "image":"mountains.jpg",
         "author":"subhash",
         "date": date(2012,5,15),
         "title":"mountain hiking",
@@ -41,7 +41,7 @@ all_posts = [
     },
     {
         "slug":"hike-in-the-mountas",
-        "image":"mountains.jpeg",
+        "image":"mountains.jpg",
         "author":"subhash",
         "date": date(2022,5,15),
         "title":"mountain hiking",
@@ -52,7 +52,7 @@ all_posts = [
     },
     {
         "slug":"hike-in-the-untains",
-        "image":"mountains.jpeg",
+        "image":"mountains.jpg",
         "author":"subhash",
         "date": date(2020,5,15),
         "title":"mountain hiking",
@@ -63,7 +63,7 @@ all_posts = [
     },
     {
         "slug":"hike-in-the-motains",
-        "image":"mountains.jpeg",
+        "image":"mountains.jpg",
         "author":"subhash",
         "date": date(2021,5,15),
         "title":"mountain hiking",
@@ -81,12 +81,12 @@ def starting_page(request):
     sorted_posts = sorted(all_posts, key=get_date)
     latest_posts = sorted_posts[-3:]
     return render(request, 'blog/index.html', {
-        posts: latest_posts,
+        'posts': latest_posts,
     })
 
 def posts(request):
     return render(request, 'blog/al-posts.html',{
-        posts: all_posts,
+        'posts': all_posts,
     })
 
 def post_details(request, slug):
